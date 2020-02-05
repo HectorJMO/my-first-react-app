@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import Navbar from '../components/navbar/navbar';
-import Equipo from '../components/equipo/index';
-import AboutUs from '../components/aboutUs/aboutUs';
-import Formulario from '../components/formulario/index';
-import Portafolio from '../components/portafolio/portafolio';
+import { HeaderImg, Body } from '../components/portafolio/portafolioInd';
+import NavbarS from '../components/navbar/navbarS';
 import Footer from '../components/footer/footer';
+import Foto from '../img/edificiomax.jpg';
 
 const Section = styled.section`
     background-color: #fff;
@@ -22,15 +19,13 @@ const Section = styled.section`
     display: block;
 `;
 
-const HomeContainer = () => (
-    <Section>   
-        <Navbar />
-        <Equipo />
-        <Portafolio />
-        <AboutUs />
-        <Formulario />
+const PortafolioIndContainer = () => (
+    <Section>
+        <NavbarS />
+        <HeaderImg img={Foto} />
+        <Body />
         <Footer />
     </Section>
 );
 
-export default HomeContainer;
+export default PortafolioIndContainer;

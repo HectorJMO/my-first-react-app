@@ -1,13 +1,15 @@
 import React from 'react';
-
 import './App.css';
 import {
   BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 
 import HomeContainer from './containers/home';
-import Page2Container from './containers/page2';
-import Page3Container from './containers/page3';
+import EquipoContainer from './containers/equipo';
+import PortafolioContainer from './containers/portafolio';
+import AboutUsContainer from './containers/aboutUs';
+import ContactoContainer from './containers/contacto';
+import PortafolioIndContainer from './containers/portafolioInd';
 
 function App() {
   return (
@@ -17,11 +19,20 @@ function App() {
           <Route exact path="/">
             <HomeContainer />
           </Route>
-          <Route exact path="/page2">
-            <Page2Container />
+          <Route exact path="/equipo">
+            <EquipoContainer />
           </Route>
-          <Route exact path="/page3">
-            <Page3Container />
+          <Route exact path="/portafolio">
+            <PortafolioContainer />
+          </Route>
+          <Route exact path="/aboutUs">
+            <AboutUsContainer />
+          </Route>
+          <Route exact path="/contacto">
+            <ContactoContainer />
+          </Route>
+          <Route exact path="/portafolioInd">
+            <PortafolioIndContainer />
           </Route>
           <Redirect to="/" />
         </Switch>

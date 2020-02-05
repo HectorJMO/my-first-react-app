@@ -1,38 +1,332 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility; 
+  overflow-x: hidden;
+}
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.header-img {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.header-small {
+  background-color: #666666;
+  height: 100px;
+  background-position: center;
+}
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo-small {
+  height: 70px;
+  width: auto;
+  border-radius: 10px;
+  float: left;
+  margin-top: 15px;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: 1px;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  word-spacing: 4px;
+}
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
   text-align: center;
+  margin-bottom: 30px;
+}
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #d1d8e0;
+  content: " ";
+  width: 100px;
+  margin: 30px auto;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+section {
+  padding : 80px 0;
+}
+.box {
+  padding: 1%;
+}
+.box p {
+  text-align: justify;
+  font-size: 110%;
+}
+.description {
+  line-height: 145%;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*FOTOS*/
+.profile-photo {
+  display: block;
+  height: 200px;
+  width: auto;
+  border-radius: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*BOTONES MAIN*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button:link,
+.button:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 100px;
+  color: #555;
+  margin-right: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+.b-alive:link,
+.b-alive:visited {
+  background-color: #d1d8e0;
+  border: 1px solid #d1d8e0;
 }
+.b-alive:hover,
+.b-alive:active {
+  background-color: #9eadbe;
+  border: 1px solid #9eadbe;
+}
+.b-ghost:link,
+.b-ghost:visited {
+  border: 1px solid #d1d8e0;
+  font-weight: 300;
+  color: #d1d8e0;
+}
+.b-ghost:hover,
+.b-ghost:active {
+  border: 1px solid #9eadbe;
+  font-weight: 300;
+  color: #9eadbe;
+}
+.logo {
+  height: 100px;
+  width: auto;
+  border-radius: 10px;
+  float: left;
+  margin-top: 20px;
+}
+.navbar {
+  float: right;
+  list-style: none;
+  margin-top: 60px;
+}
+.navbar li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.navbar li a:link,
+.navbar li a:visited {
+  padding: 6px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+.navbar li a:hover,
+.navbar li a:active {
+  border-bottom: 2px solid #d1d8e0;
+}
+/*--PORTAFOLIO--*/
+.portafolio-photos {
+  padding: 0;
+}
+.page {
+  margin-top: 80px;
+  margin-bottom: 550px;
+}
+.buildings-showcase {
+  list-style: none;
+  width: 100%;
+}
+.buildings-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.building-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+.building-photo img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.7;
+}
+.building-photo img:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+/*--FOOTER--*/
+footer {
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
+}
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+.social-links {
+  list-style: none;
+  float: right;
+}
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.ion-social-facebook:hover {
+  color: #3b5998;
+}
+.ion-social-twitter:hover {
+  color: #00aced;
+}
+.ion-social-googleplus:hover {
+  color: #dd4b39;
+}
+.ion-social-instagram:hover {
+  color: #517fa4;
+}
+footer p {
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+/*--FORM--*/
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+textarea {
+  height: 100px;
+}
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+*:focus {outline: none;}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*--PORTAFOLIO IND--*/
+.section-testimonials {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/edificiomax.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/edificiomax.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.ind {
+  padding-right: 15%;
+}
+.enum {
+  margin-left: 25%;
+  float: left;   
+}
+.steps-box {
+  margin-top: 30px;
 }
