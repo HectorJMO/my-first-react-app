@@ -16,8 +16,10 @@ const Wrapper = styled.div`
 `;
 
 const Section = styled.div`
+    display: flex;
     max-width: 1140px;
-    margin: 0 auto;
+    width: 50%;
+    margin: 10px auto;
 `;
 
 export const Titulo = styled.h3`
@@ -46,7 +48,7 @@ const Form = styled.input`
 `;
 
 const Etiqueta = styled.label`
-    
+    width: 40%;
 `;
 
 const TextArea = styled.textarea`
@@ -59,9 +61,9 @@ const TextArea = styled.textarea`
 
 const Formulario = () => (
     <Wrapper>
-        <Section>
+        <div>
             <Titulo>Contáctanos</Titulo>
-        </Section>
+        </div>
         <Section>
             <Etiqueta>Name</Etiqueta>
             <Form type="text" name="name" id="name" placeholder="Your name" required></Form>

@@ -15,7 +15,7 @@ const Button = styled(Link)`
     &:hover, &:active{
         border-bottom: 2px solid #d1d8e0;
     }
-    display: inline-block;
+    display: flex;
     margin-left: 40px;
     float: right;
     list-style: none;

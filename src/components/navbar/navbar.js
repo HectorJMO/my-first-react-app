@@ -23,7 +23,6 @@ const NavbarBackground = styled.div`
     padding: 0;
     box-sizing: border-box;
     display: block;
-
 `;
 const Navbar = styled.div`
     display: flex;
@@ -35,6 +34,10 @@ const LogoImg = styled.img`
     float: left;
     margin-top: 20px;
     margin-left: 20px;
+`;
+const Row = styled.div`
+    max-width: 1140px;
+    margin: 0 auto;
 `;
 
 const navbar = () => {
@@ -48,7 +51,7 @@ const navbar = () => {
 
     return(
         <NavbarBackground img={Fondo}>
-            <div className='row'>
+            <Row>
                 <a href="index.html">
                     <LogoImg src={Logo} alt="ConstructureLabs logo"  className="logo"></LogoImg>
                 </a>
@@ -57,7 +60,7 @@ const navbar = () => {
                         <Button url={url} text={text} key={url} />
                     ))
                 }
-            </div>
+            </Row>
             <div className='hero-text-box'>
                 <h1>Construye, construye,<br/> construye!</h1>
                 <a className="button b-alive" href='/contacto'>Contact Us</a>
